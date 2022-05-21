@@ -1,0 +1,41 @@
+{
+  "name": "starbound-jsonc-formatter",
+  "version": "1.0.0",
+  "description": "",
+  "main": "dist/index.js",
+  "repository": "git@github.com:jaoafa/starbound-jsonc-formatter.git",
+  "author": "Tomachi",
+  "private": true,
+  "scripts": {
+    "build": "ts-node ./src/main.ts",
+    "dev": "ts-node-dev ./src/main.ts",
+    "start": "node ./dist/main.js",
+    "compile": "tsc -p .",
+    "compile:test": "tsc -p . --noEmit",
+    "lint": "run-p -c lint:prettier lint:eslint lint:tsc",
+    "lint:prettier": "prettier --check src",
+    "lint:eslint": "eslint . --ext ts,tsx",
+    "lint:tsc": "tsc",
+    "fix": "run-s fix:prettier fix:eslint",
+    "fix:eslint": "eslint . --ext ts,tsx --fix",
+    "fix:prettier": "prettier --write src"
+  },
+  "devDependencies": {
+    "@types/node": "16.11.26",
+    "@typescript-eslint/eslint-plugin": "5.15.0",
+    "@typescript-eslint/parser": "5.15.0",
+    "eslint": "8.11.0",
+    "eslint-config-prettier": "8.5.0",
+    "eslint-config-standard": "16.0.3",
+    "eslint-plugin-import": "2.25.4",
+    "eslint-plugin-node": "11.1.0",
+    "eslint-plugin-promise": "6.0.0",
+    "jsonc-parser": "^3.0.0",
+    "prettier": "2.6.0",
+    "ts-loader": "9.2.8",
+    "ts-node": "10.7.0",
+    "ts-node-dev": "1.1.8",
+    "typescript": "4.6.2",
+    "yarn-run-all": "3.1.1"
+  }
+}

@@ -1,0 +1,9 @@
+name: 'starbound-jsonc-formatter'
+description: 'Format Starbound JSONC files'
+author: 'Tomachi (book000)'
+branding:
+  icon: 'check'
+  color: yellow
+runs:
+  using: 'docker'
+  image: 'Dockerfile'
